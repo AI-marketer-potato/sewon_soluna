@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { Calendar, User, Tag, ArrowLeft, Share2 } from 'lucide-react'
+import { Calendar, User, Tag, ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { getAllPostSlugs, getPostBySlug } from '@/lib/mdx'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import ShareButton from '@/components/ShareButton'
 
 export async function generateStaticParams() {
   const paths = getAllPostSlugs()
@@ -168,25 +169,7 @@ export default function BlogPostPage({ params }) {
             {/* 공유 버튼 */}
             <div className="flex items-center gap-4 pt-4 border-t">
               <span className="text-sm text-gray-500">공유하기:</span>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => {
-                  if (navigator.share) {
-                    navigator.share({
-                      title: post.title,
-                      text: post.description,
-                      url: window.location.href,
-                    })
-                  } else {
-                    navigator.clipboard.writeText(window.location.href)
-                    alert('링크가 클립보드에 복사되었습니다!')
-                  }
-                }}
-              >
-                <Share2 className="h-4 w-4 mr-2" />
-                공유
-              </Button>
+              <ShareButton title={post.title} description={post.description} />
             </div>
           </CardContent>
         </Card>
