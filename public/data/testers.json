@@ -1,0 +1,74 @@
+[
+  {
+    "id": "T001",
+    "name": "김민수",
+    "email": "minsu.kim@email.com",
+    "region": "서울",
+    "car_model": "현대 아반떼",
+    "registration_date": "2024-01-15",
+    "status": "active"
+  },
+  {
+    "id": "T002", 
+    "name": "이영희",
+    "email": "younghee.lee@email.com",
+    "region": "부산",
+    "car_model": "기아 K5",
+    "registration_date": "2024-01-20",
+    "status": "active"
+  },
+  {
+    "id": "T003",
+    "name": "박철수",
+    "email": "chulsoo.park@email.com", 
+    "region": "대구",
+    "car_model": "현대 소나타",
+    "registration_date": "2024-02-01",
+    "status": "completed"
+  },
+  {
+    "id": "T004",
+    "name": "정수진",
+    "email": "sujin.jung@email.com",
+    "region": "인천",
+    "car_model": "기아 스포티지",
+    "registration_date": "2024-02-10",
+    "status": "active"
+  },
+  {
+    "id": "T005",
+    "name": "최동훈",
+    "email": "donghoon.choi@email.com",
+    "region": "광주",
+    "car_model": "현대 투싼",
+    "registration_date": "2024-02-15",
+    "status": "active"
+  },
+  {
+    "id": "T006",
+    "name": "한지영",
+    "email": "jiyoung.han@email.com",
+    "region": "대전",
+    "car_model": "기아 셀토스",
+    "registration_date": "2024-02-20",
+    "status": "pending"
+  },
+  {
+    "id": "T007",
+    "name": "윤성호",
+    "email": "sungho.yoon@email.com",
+    "region": "울산",
+    "car_model": "현대 그랜저",
+    "registration_date": "2024-03-01",
+    "status": "active"
+  },
+  {
+    "id": "T008",
+    "name": "강미라",
+    "email": "mira.kang@email.com",
+    "region": "수원",
+    "car_model": "기아 쏘렌토",
+    "registration_date": "2024-03-05",
+    "status": "completed"
+  }
+]

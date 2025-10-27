@@ -1,0 +1,62 @@
+[
+  {
+    "id": "L001",
+    "name": "김기업",
+    "email": "gieop.kim@company.com",
+    "company": "현대자동차",
+    "position": "연구개발팀장",
+    "phone": "010-1234-5678",
+    "interest_area": "PCM 기술 도입",
+    "message": "자동차 냉각 시스템에 PCM 기술 적용에 대해 논의하고 싶습니다.",
+    "created_date": "2024-02-01",
+    "status": "contacted"
+  },
+  {
+    "id": "L002",
+    "name": "이혁신",
+    "email": "hyukshin.lee@autoparts.co.kr",
+    "company": "한국자동차부품",
+    "position": "기술이사",
+    "phone": "010-2345-6789",
+    "interest_area": "파트너십",
+    "message": "PCM 기술을 활용한 부품 개발 협력을 제안드립니다.",
+    "created_date": "2024-02-05",
+    "status": "meeting_scheduled"
+  },
+  {
+    "id": "L003",
+    "name": "박투자",
+    "email": "tuja.park@venture.com",
+    "company": "벤처캐피털코리아",
+    "position": "투자심사역",
+    "phone": "010-3456-7890",
+    "interest_area": "투자 검토",
+    "message": "솔루나의 PCM 기술에 대한 투자를 검토하고 있습니다.",
+    "created_date": "2024-02-10",
+    "status": "proposal_sent"
+  },
+  {
+    "id": "L004",
+    "name": "최연구",
+    "email": "yeongu.choi@university.ac.kr",
+    "company": "서울대학교",
+    "position": "기계공학과 교수",
+    "phone": "010-4567-8901",
+    "interest_area": "연구 협력",
+    "message": "PCM 기술 관련 공동 연구를 제안합니다.",
+    "created_date": "2024-02-15",
+    "status": "in_discussion"
+  },
+  {
+    "id": "L005",
+    "name": "정글로벌",
+    "email": "global.jung@export.com",
+    "company": "글로벌무역",
+    "position": "해외사업부장",
+    "phone": "010-5678-9012",
+    "interest_area": "해외 진출",
+    "message": "PCM 기술의 해외 시장 진출을 도와드리고 싶습니다.",
+    "created_date": "2024-02-20",
+    "status": "contacted"
+  }
+]
