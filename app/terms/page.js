@@ -23,7 +23,7 @@ export default function TermsPage() {
               <CardTitle>제1조 (목적)</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p>이 약관은 솔루나(이하 "회사")가 제공하는 베타 테스트 서비스, 파트너십 프로그램, 기타 관련 서비스(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+              <p>이 약관은 솔루나(이하 &ldquo;회사&rdquo;)가 제공하는 베타 테스트 서비스, 파트너십 프로그램, 기타 관련 서비스(이하 &ldquo;서비스&rdquo;)의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
             </CardContent>
           </Card>
 
@@ -36,22 +36,22 @@ export default function TermsPage() {
               
               <div className="space-y-3">
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold mb-2">1. "서비스"</h4>
+                  <h4 className="font-semibold mb-2">1. &ldquo;서비스&rdquo;</h4>
                   <p className="text-sm">회사가 제공하는 PCM 썬쉐이드 베타 테스트, 파트너십 프로그램, 웹사이트 이용 등 모든 서비스를 의미합니다.</p>
                 </div>
                 
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold mb-2">2. "이용자"</h4>
+                  <h4 className="font-semibold mb-2">2. &ldquo;이용자&rdquo;</h4>
                   <p className="text-sm">회사의 서비스에 접속하여 이 약관에 따라 회사가 제공하는 서비스를 받는 개인 또는 법인을 의미합니다.</p>
                 </div>
                 
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold mb-2">3. "베타 테스터"</h4>
+                  <h4 className="font-semibold mb-2">3. &ldquo;베타 테스터&rdquo;</h4>
                   <p className="text-sm">회사의 제품 개발 과정에 참여하여 제품을 테스트하고 피드백을 제공하는 이용자를 의미합니다.</p>
                 </div>
                 
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold mb-2">4. "파트너"</h4>
+                  <h4 className="font-semibold mb-2">4. &ldquo;파트너&rdquo;</h4>
                   <p className="text-sm">회사와 사업적 협력 관계를 맺고 상호 이익을 추구하는 개인 또는 법인을 의미합니다.</p>
                 </div>
               </div>
