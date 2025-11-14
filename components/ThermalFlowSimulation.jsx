@@ -31,9 +31,29 @@ export default function ThermalFlowSimulation() {
     setTimeStep(0)
   }
 
+  // Calculate temperature based on time
+  const calculateTemp = (baseTemp, maxTemp, timeStep) => {
+    const progress = Math.min(timeStep / 12, 1)
+    return (25 + (maxTemp - 25) * progress).toFixed(1)
+  }
+
   const scenarios = [
-    { name: '일반 썬쉐이드', maxTemp: 42.5, color: 'from-red-500 to-orange-400' },
-    { name: '솔루나 PCM', maxTemp: 38.0, color: 'from-cyan-400 to-blue-500' }
+    {
+      name: '일반 썬쉐이드',
+      baseTemp: 25,
+      maxTemp: 42.5,
+      currentTemp: calculateTemp(25, 42.5, timeStep),
+      color: 'from-red-500 to-orange-400',
+      bgColor: 'red'
+    },
+    {
+      name: '솔루나 PCM',
+      baseTemp: 25,
+      maxTemp: 38.0,
+      currentTemp: calculateTemp(25, 38.0, timeStep),
+      color: 'from-cyan-400 to-blue-500',
+      bgColor: 'cyan'
+    }
   ]
 
   return (
@@ -93,25 +113,38 @@ export default function ThermalFlowSimulation() {
                       <div className={`h-full bg-gradient-to-r ${scenario.color} rounded-full shadow-lg`}></div>
                     </div>
 
-                    {/* Heat flow arrows (downward from sun) */}
+                    {/* Animated heat flow arrows */}
                     <div className="absolute top-8 left-0 right-0 flex justify-around">
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="flex flex-col items-center">
-                          <div className="w-0.5 h-6 bg-gradient-to-b from-yellow-400 to-transparent animate-pulse"></div>
+                          <div
+                            className="w-0.5 bg-gradient-to-b from-yellow-400 to-transparent"
+                            style={{
+                              height: `${6 + (timeStep * 2)}px`,
+                              transition: 'height 0.5s ease'
+                            }}
+                          ></div>
                           <div className="text-yellow-400 text-xs">↓</div>
                         </div>
                       ))}
                     </div>
 
-                    {/* Vehicle interior temperature field */}
+                    {/* Vehicle interior temperature field - animated */}
                     <div className="absolute top-20 left-1/4 right-1/4 bottom-8">
                       {/* Temperature gradient visualization */}
                       <div
-                        className={`w-full h-full rounded-lg ${
-                          scenario.name === '일반 썬쉐이드'
-                            ? 'bg-gradient-to-b from-red-400 via-orange-300 to-yellow-200'
-                            : 'bg-gradient-to-b from-cyan-300 via-blue-200 to-teal-100'
-                        } opacity-70`}
+                        className={`w-full h-full rounded-lg transition-all duration-1000`}
+                        style={{
+                          background: scenario.name === '일반 썬쉐이드'
+                            ? `linear-gradient(to bottom,
+                                rgba(248, 113, 113, ${0.3 + timeStep * 0.05}) 0%,
+                                rgba(251, 146, 60, ${0.4 + timeStep * 0.04}) 50%,
+                                rgba(253, 224, 71, ${0.3 + timeStep * 0.03}) 100%)`
+                            : `linear-gradient(to bottom,
+                                rgba(103, 232, 249, ${0.2 + timeStep * 0.03}) 0%,
+                                rgba(96, 165, 250, ${0.3 + timeStep * 0.02}) 50%,
+                                rgba(94, 234, 212, ${0.2 + timeStep * 0.02}) 100%)`
+                        }}
                       >
                         {/* Temperature contour lines */}
                         <div className="relative w-full h-full">
@@ -125,15 +158,15 @@ export default function ThermalFlowSimulation() {
                         </div>
                       </div>
 
-                      {/* Temperature labels */}
+                      {/* Animated temperature labels */}
                       <div className="absolute top-2 right-2 bg-black/70 backdrop-blur-sm rounded px-2 py-1">
-                        <span className="text-white text-xs font-bold data-label">
-                          {scenario.maxTemp}°C
+                        <span className="text-white text-xs font-bold">
+                          {scenario.currentTemp}°C
                         </span>
                       </div>
                       <div className="absolute bottom-2 right-2 bg-black/70 backdrop-blur-sm rounded px-2 py-1">
-                        <span className="text-white text-xs font-bold data-label">
-                          {(scenario.maxTemp - 8).toFixed(1)}°C
+                        <span className="text-white text-xs font-bold">
+                          25.0°C
                         </span>
                       </div>
                     </div>
@@ -162,13 +195,16 @@ export default function ThermalFlowSimulation() {
                   </div>
                 </div>
 
-                {/* Temperature reading */}
+                {/* Animated temperature reading */}
                 <div className="text-center p-4 bg-gray-50 rounded-lg">
-                  <div className="text-sm text-gray-600 mb-1">최고 온도</div>
-                  <div className={`text-3xl font-bold ${
+                  <div className="text-sm text-gray-600 mb-1">현재 온도</div>
+                  <div className={`text-3xl font-bold transition-all duration-500 ${
                     scenario.name === '일반 썬쉐이드' ? 'text-red-600' : 'text-cyan-600'
                   }`}>
-                    {scenario.maxTemp}°C
+                    {scenario.currentTemp}°C
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    시작: 25.0°C → 최종: {scenario.maxTemp}°C
                   </div>
                 </div>
               </div>
