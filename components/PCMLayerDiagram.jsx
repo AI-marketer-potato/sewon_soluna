@@ -80,12 +80,12 @@ export default function PCMLayerDiagram() {
                 }}
               >
                 {/* Layer content */}
-                <div className="absolute inset-0 flex items-center px-4">
+                <div className="absolute inset-0 flex items-start py-2.5 px-4">
                   <div className="flex items-center gap-3 flex-1">
-                    <span className="text-2xl">{layer.icon}</span>
+                    <span className="text-2xl leading-none">{layer.icon}</span>
                     <div className="flex-1">
-                      <div className="font-bold text-gray-900 text-sm">{layer.name}</div>
-                      <div className="text-xs text-gray-700">{layer.description}</div>
+                      <div className="font-bold text-gray-900 text-sm leading-tight">{layer.name}</div>
+                      <div className="text-xs text-gray-700 leading-tight mt-0.5">{layer.description}</div>
                     </div>
 
                     {/* Layer indicator */}
