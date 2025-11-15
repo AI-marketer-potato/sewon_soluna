@@ -14,7 +14,7 @@ export default function PCMLayerDiagram() {
     {
       name: 'PCM 마이크로캡슐층',
       description: '상변화 열 흡수 (28-32°C)',
-      color: 'from-blue-400 to-cyan-400',
+      color: 'from-blue-500 to-blue-600',
       height: 'h-20',
       icon: '❄️',
       highlight: true
@@ -36,11 +36,11 @@ export default function PCMLayerDiagram() {
   ]
 
   return (
-    <div className="bg-white rounded-xl shadow-2xl p-8 border border-gray-100">
-      <div className="mb-8">
+    <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-gray-200">
+      <div className="mb-6">
         <div className="flex items-center gap-3 mb-3">
-          <Thermometer className="h-6 w-6 text-cyan-600" />
-          <h3 className="text-2xl font-bold text-gray-900">PCM 복합 소재 구조</h3>
+          <Thermometer className="h-6 w-6 text-blue-600" />
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900">PCM 복합 소재 구조</h3>
         </div>
         <p className="text-sm text-gray-600">4층 구조 / 총 두께 약 3mm / 유연성 유지</p>
       </div>
@@ -68,9 +68,9 @@ export default function PCMLayerDiagram() {
                   ${layer.height}
                   bg-gradient-to-r ${layer.color}
                   rounded-lg
-                  shadow-lg
+                  shadow-md
                   border-2
-                  ${layer.highlight ? 'border-cyan-500 shadow-cyan-200' : 'border-white'}
+                  ${layer.highlight ? 'border-blue-600' : 'border-gray-200'}
                   relative
                   overflow-hidden
                 `}
@@ -92,8 +92,8 @@ export default function PCMLayerDiagram() {
                   {/* Layer indicator */}
                   {layer.highlight && (
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-cyan-600 rounded-full animate-pulse"></div>
-                      <span className="text-xs font-bold text-cyan-900 data-label">핵심 기술</span>
+                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                      <span className="text-xs font-bold text-white data-label">핵심 기술</span>
                     </div>
                   )}
                 </div>
@@ -115,19 +115,19 @@ export default function PCMLayerDiagram() {
         </div>
 
         {/* Temperature flow indicator */}
-        <div className="mt-6 p-4 bg-gradient-to-r from-red-50 via-orange-50 to-cyan-50 rounded-lg border border-cyan-200">
-          <div className="flex items-center justify-between">
+        <div className="mt-6 p-4 bg-slate-50 rounded-lg border border-gray-200">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
               <span className="text-sm text-gray-700">입사 열량: 100%</span>
             </div>
             <div className="text-gray-400">→</div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
-              <span className="text-sm font-bold text-cyan-900">투과 열량: 38%</span>
+              <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+              <span className="text-sm font-bold text-blue-900">투과 열량: 38%</span>
             </div>
           </div>
-          <div className="mt-2 text-xs text-center text-gray-600">
+          <div className="mt-3 text-xs text-center text-gray-600">
             PCM층에서 62%의 열 에너지 흡수 및 저장
           </div>
         </div>
