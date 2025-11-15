@@ -80,7 +80,7 @@ export default function PCMLayerDiagram() {
                 }}
               >
                 {/* Layer content */}
-                <div className="absolute inset-0 flex items-start pt-3 pb-4 px-4">
+                <div className="absolute inset-0 flex items-center px-4">
                   <div className="flex items-center gap-3 flex-1">
                     <span className="text-2xl">{layer.icon}</span>
                     <div className="flex-1">
