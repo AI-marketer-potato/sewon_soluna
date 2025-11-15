@@ -14,7 +14,7 @@ export default function PCMLayerDiagram() {
     {
       name: 'PCM 마이크로캡슐층',
       description: '상변화 열 흡수 (28-32°C)',
-      color: 'from-indigo-600 to-blue-700',
+      color: 'from-cyan-500 to-cyan-600',
       height: 'min-h-[80px]',
       icon: '❄️',
       highlight: true
@@ -39,7 +39,7 @@ export default function PCMLayerDiagram() {
     <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-gray-200">
       <div className="mb-6">
         <div className="flex items-center gap-3 mb-3">
-          <Thermometer className="h-6 w-6 text-blue-600" />
+          <Thermometer className="h-6 w-6 text-cyan-600" />
           <h3 className="text-xl md:text-2xl font-bold text-gray-900">PCM 복합 소재 구조</h3>
         </div>
         <p className="text-sm text-gray-600">4층 구조 / 총 두께 약 3mm / 유연성 유지</p>
@@ -70,7 +70,7 @@ export default function PCMLayerDiagram() {
                   rounded-lg
                   shadow-md
                   border-2
-                  ${layer.highlight ? 'border-blue-600' : 'border-gray-200'}
+                  ${layer.highlight ? 'border-cyan-500' : 'border-gray-200'}
                   relative
                   overflow-hidden
                 `}
@@ -123,8 +123,8 @@ export default function PCMLayerDiagram() {
             </div>
             <div className="text-gray-400">→</div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-              <span className="text-sm font-bold text-blue-900">투과 열량: 38%</span>
+              <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
+              <span className="text-sm font-bold text-cyan-900">투과 열량: 38%</span>
             </div>
           </div>
           <div className="mt-3 text-xs text-center text-gray-600">
@@ -134,9 +134,9 @@ export default function PCMLayerDiagram() {
       </div>
 
       {/* Technical note */}
-      <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-        <div className="text-sm text-gray-700">
-          <span className="font-bold text-blue-900">상변화 메커니즘:</span> PCM 마이크로캡슐이 28-32°C 범위에서
+      <div className="mt-6 p-4 bg-cyan-50 rounded-lg border-l-4 border-cyan-500">
+        <div className="text-sm text-gray-800">
+          <span className="font-bold text-cyan-900">상변화 메커니즘:</span> PCM 마이크로캡슐이 28-32°C 범위에서
           고체→액체로 상변화하며 잠열을 흡수, 열 에너지를 저장하여 차량 내부로의 열 전달을 차단합니다.
         </div>
       </div>

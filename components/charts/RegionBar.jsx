@@ -14,21 +14,21 @@ export default function RegionBar({ data, title = "지역별 성능 비교" }) {
   return (
     <div className="w-full">
       <h3 className="text-lg font-semibold mb-4 text-center">{title}</h3>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={350}>
         <BarChart
           data={data}
           margin={{
             top: 5,
             right: 30,
             left: 20,
-            bottom: 5,
+            bottom: 60,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis 
-            dataKey="region" 
+          <XAxis
+            dataKey="region"
             tick={{ fontSize: 12 }}
-            label={{ value: '지역', position: 'insideBottom', offset: -5 }}
+            label={{ value: '지역', position: 'insideBottom', offset: 0 }}
           />
           <YAxis 
             tick={{ fontSize: 12 }}

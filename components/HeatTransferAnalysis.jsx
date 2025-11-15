@@ -24,9 +24,9 @@ export default function HeatTransferAnalysis() {
     {
       name: '전도 열전달',
       icon: Waves,
-      color: 'from-blue-500 to-blue-600',
-      borderColor: 'border-blue-600',
-      bgColor: 'from-blue-50 to-blue-100',
+      color: 'from-cyan-500 to-cyan-600',
+      borderColor: 'border-cyan-600',
+      bgColor: 'from-cyan-50 to-cyan-100',
       contribution: 25,
       description: 'PCM층의 낮은 열전도율로 열 전달 저항 증가',
       formula: 'q_cond = kA(T₁ - T₂)/L',
@@ -40,9 +40,9 @@ export default function HeatTransferAnalysis() {
     {
       name: '대류 열전달',
       icon: Wind,
-      color: 'from-slate-500 to-slate-600',
-      borderColor: 'border-slate-600',
-      bgColor: 'from-slate-50 to-slate-100',
+      color: 'from-gray-500 to-gray-600',
+      borderColor: 'border-gray-600',
+      bgColor: 'from-gray-50 to-gray-100',
       contribution: 10,
       description: 'PCM 상변화로 온도 구배 감소, 자연대류 억제',
       formula: 'q_conv = hA(T_s - T_∞)',
@@ -56,10 +56,10 @@ export default function HeatTransferAnalysis() {
   ]
 
   const phaseChangeProcess = [
-    { stage: '고체 상태', temp: '< 28°C', state: '잠열 저장', color: 'bg-blue-500' },
-    { stage: '상변화 시작', temp: '28°C', state: '흡열 시작', color: 'bg-blue-600' },
-    { stage: '상변화 진행', temp: '28-32°C', state: '잠열 흡수', color: 'bg-blue-700' },
-    { stage: '액체 상태', temp: '> 32°C', state: '현열 증가', color: 'bg-slate-600' }
+    { stage: '고체 상태', temp: '< 28°C', state: '잠열 저장', color: 'bg-cyan-500' },
+    { stage: '상변화 시작', temp: '28°C', state: '흡열 시작', color: 'bg-cyan-600' },
+    { stage: '상변화 진행', temp: '28-32°C', state: '잠열 흡수', color: 'bg-cyan-700' },
+    { stage: '액체 상태', temp: '> 32°C', state: '현열 증가', color: 'bg-cyan-800' }
   ]
 
   return (
@@ -143,7 +143,7 @@ export default function HeatTransferAnalysis() {
 
             {/* PCM absorption */}
             <div className="flex-1 max-w-xs">
-              <div className="text-center p-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg text-white mb-2">
+              <div className="text-center p-4 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl shadow-lg text-white mb-2">
                 <div className="text-sm font-semibold mb-1">PCM층 흡수</div>
                 <div className="text-3xl font-bold">90 W/m²</div>
                 <div className="text-xs mt-1">(잠열 흡수)</div>
@@ -155,7 +155,7 @@ export default function HeatTransferAnalysis() {
 
             {/* Output */}
             <div className="flex-shrink-0">
-              <div className="text-center p-6 bg-gradient-to-br from-slate-500 to-slate-600 rounded-xl shadow-xl text-white">
+              <div className="text-center p-6 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl shadow-xl text-white">
                 <div className="text-sm font-semibold mb-2">차량 내부 투과</div>
                 <div className="text-4xl font-bold mb-1">45</div>
                 <div className="text-sm">W/m²</div>
@@ -164,15 +164,15 @@ export default function HeatTransferAnalysis() {
           </div>
 
           {/* Overall efficiency */}
-          <div className="mt-6 md:mt-8 p-4 md:p-6 bg-slate-50 rounded-xl border-l-4 border-blue-600">
+          <div className="mt-6 md:mt-8 p-4 md:p-6 bg-cyan-50 rounded-xl border-l-4 border-cyan-600">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-center sm:text-left">
                 <div className="text-sm text-gray-600 mb-1">총 열차단 효율</div>
-                <div className="text-3xl font-bold text-blue-600">95.0%</div>
+                <div className="text-3xl font-bold text-cyan-600">95.0%</div>
               </div>
               <div className="text-center sm:text-right">
                 <div className="text-sm text-gray-600 mb-1">에너지 절감량</div>
-                <div className="text-3xl font-bold text-blue-600">855 W/m²</div>
+                <div className="text-3xl font-bold text-cyan-600">855 W/m²</div>
               </div>
             </div>
           </div>
@@ -203,16 +203,16 @@ export default function HeatTransferAnalysis() {
 
             {/* Key insights */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-              <div className="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600">
+              <div className="p-4 bg-cyan-50 rounded-lg border-l-4 border-cyan-600">
                 <div className="font-semibold text-gray-900 mb-2">온도 평탄화 효과</div>
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-700">
                   28-32°C 구간에서 PCM이 액체로 상변화하며 대량의 잠열(180 kJ/kg)을 흡수.
                   이로 인해 온도 상승 속도가 현저히 감소하여 온도가 평탄하게 유지됩니다.
                 </div>
               </div>
-              <div className="p-4 bg-slate-50 rounded-lg border-l-4 border-slate-600">
+              <div className="p-4 bg-cyan-50 rounded-lg border-l-4 border-cyan-500">
                 <div className="font-semibold text-gray-900 mb-2">열 저장 용량</div>
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-700">
                   PCM 1kg당 180 kJ의 열 에너지를 저장 가능. 일반 소재 대비 약 60배 높은
                   열 저장 밀도로 장시간 냉각 효과를 유지할 수 있습니다.
                 </div>

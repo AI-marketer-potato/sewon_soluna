@@ -363,19 +363,21 @@ export default function SimulationPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-cyan-600 to-blue-600 py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            더 자세한 기술 정보가 필요하신가요?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            시뮬레이션 원본 데이터와 상세 보고서를 확인하실 수 있습니다.
-          </p>
+      <section className="bg-gray-50 py-16 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              더 자세한 기술 정보가 필요하신가요?
+            </h2>
+            <p className="text-lg text-gray-600">
+              시뮬레이션 원본 데이터와 상세 보고서를 확인하실 수 있습니다.
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary" className="text-cyan-700 hover:text-cyan-800">
+            <Button asChild size="lg" variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-100">
               <Link href="/science">기술 상세 보기</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-cyan-600">
+            <Button asChild size="lg" className="bg-gray-900 text-white hover:bg-gray-800">
               <Link href="/partners">기술 협력 문의</Link>
             </Button>
           </div>
