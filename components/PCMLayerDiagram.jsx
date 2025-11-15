@@ -14,7 +14,7 @@ export default function PCMLayerDiagram() {
     {
       name: 'PCM 마이크로캡슐층',
       description: '상변화 열 흡수 (28-32°C)',
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-indigo-600 to-blue-700',
       height: 'min-h-[80px]',
       icon: '❄️',
       highlight: true
