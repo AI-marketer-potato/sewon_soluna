@@ -43,7 +43,7 @@ export default function ThermalFlowSimulation() {
       baseTemp: 25,
       maxTemp: 42.5,
       currentTemp: calculateTemp(25, 42.5, timeStep),
-      color: 'from-red-500 to-orange-400',
+      color: 'from-orange-500 to-red-500',
       bgColor: 'red'
     },
     {
@@ -51,8 +51,8 @@ export default function ThermalFlowSimulation() {
       baseTemp: 25,
       maxTemp: 38.0,
       currentTemp: calculateTemp(25, 38.0, timeStep),
-      color: 'from-cyan-400 to-blue-500',
-      bgColor: 'cyan'
+      color: 'from-blue-500 to-blue-600',
+      bgColor: 'blue'
     }
   ]
 
@@ -199,7 +199,7 @@ export default function ThermalFlowSimulation() {
                 <div className="text-center p-4 bg-gray-50 rounded-lg">
                   <div className="text-sm text-gray-600 mb-1">현재 온도</div>
                   <div className={`text-3xl font-bold transition-all duration-500 ${
-                    scenario.name === '일반 썬쉐이드' ? 'text-red-600' : 'text-cyan-600'
+                    scenario.name === '일반 썬쉐이드' ? 'text-orange-600' : 'text-blue-600'
                   }`}>
                     {scenario.currentTemp}°C
                   </div>
@@ -212,7 +212,7 @@ export default function ThermalFlowSimulation() {
           </div>
 
           {/* Analysis Summary */}
-          <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border-l-4 border-cyan-500">
+          <div className="mt-8 p-6 bg-slate-50 rounded-xl border-l-4 border-blue-600">
             <h4 className="font-bold text-gray-900 mb-3">CFD 해석 결과 요약</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
@@ -286,11 +286,11 @@ export default function ThermalFlowSimulation() {
                   {/* Legend */}
                   <div className="absolute top-2 right-2 bg-white rounded-lg p-3 shadow-lg border border-gray-200">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="w-6 h-0.5 bg-red-500"></div>
+                      <div className="w-6 h-0.5 bg-orange-500"></div>
                       <span className="text-xs text-gray-700">일반 썬쉐이드</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-0.5 bg-cyan-500"></div>
+                      <div className="w-6 h-0.5 bg-blue-600"></div>
                       <span className="text-xs font-semibold text-gray-900">솔루나 PCM</span>
                     </div>
                   </div>
@@ -308,19 +308,19 @@ export default function ThermalFlowSimulation() {
 
             {/* Key findings */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-4 bg-cyan-50 rounded-lg border-l-4 border-cyan-500">
+              <div className="p-4 bg-white rounded-lg border border-gray-200">
                 <div className="text-sm font-semibold text-gray-900 mb-1">균일한 온도 분포</div>
                 <div className="text-xs text-gray-600">
                   PCM 효과로 차량 내부 온도 편차가 일반 썬쉐이드 대비 60% 감소
                 </div>
               </div>
-              <div className="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+              <div className="p-4 bg-white rounded-lg border border-gray-200">
                 <div className="text-sm font-semibold text-gray-900 mb-1">최고 온도 저감</div>
                 <div className="text-xs text-gray-600">
                   천장 부근 최고 온도가 42.5°C에서 38.0°C로 10.6% 감소
                 </div>
               </div>
-              <div className="p-4 bg-teal-50 rounded-lg border-l-4 border-teal-500">
+              <div className="p-4 bg-white rounded-lg border border-gray-200">
                 <div className="text-sm font-semibold text-gray-900 mb-1">쾌적성 향상</div>
                 <div className="text-xs text-gray-600">
                   수직 온도 구배 완화로 탑승자 열적 쾌적성 지수 45% 개선

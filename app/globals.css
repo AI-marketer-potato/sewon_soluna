@@ -7,33 +7,33 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 222.2 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222.2 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    /* Cool temperature palette - thermal visualization theme */
-    --primary: 199 89% 48%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 142 76% 36%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 200 18% 92%;
+    --popover-foreground: 222.2 47% 11%;
+    /* Professional B2B palette - automotive/industrial */
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215.4 16.3% 46.9%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 188 94% 85%;
-    --accent-foreground: 199 89% 20%;
+    --accent: 217.2 91.2% 59.8%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 199 89% 48%;
+    --ring: 217.2 91.2% 59.8%;
     --radius: 0.5rem;
 
-    /* Thermal visualization colors */
-    --thermal-hot: 0 100% 50%;
-    --thermal-warm: 39 100% 50%;
-    --thermal-neutral: 60 100% 50%;
-    --thermal-cool: 180 100% 50%;
-    --thermal-cold: 220 100% 50%;
+    /* Thermal visualization colors - desaturated professional */
+    --thermal-hot: 24.6 95% 53.1%;
+    --thermal-warm: 20.5 90.2% 48.2%;
+    --thermal-neutral: 47.9 95.8% 53.1%;
+    --thermal-cool: 199.3 89.2% 48.4%;
+    --thermal-cold: 221.2 83.2% 53.3%;
   }
 
   .dark {

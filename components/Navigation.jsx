@@ -41,7 +41,7 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold text-cyan-600 hover:text-cyan-700 transition-colors">
+              <span className="text-xl font-bold text-slate-800 hover:text-blue-600 transition-colors">
                 솔루나
               </span>
             </Link>
@@ -53,7 +53,7 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-cyan-600 px-4 py-2 text-sm font-medium transition-colors rounded-md hover:bg-gray-50"
+                className="text-gray-700 hover:text-blue-600 px-4 py-2 text-sm font-medium transition-colors rounded-md hover:bg-gray-50"
               >
                 {item.label}
               </Link>
@@ -84,7 +84,7 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-cyan-600 hover:bg-gray-50 block px-3 py-2 text-base font-medium transition-colors rounded-md"
+                className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 text-base font-medium transition-colors rounded-md"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
