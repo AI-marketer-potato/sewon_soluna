@@ -8,14 +8,14 @@ export default function PCMLayerDiagram() {
       name: '열반사 외층',
       description: '태양광 반사 (반사율 85%)',
       color: 'from-gray-200 to-gray-300',
-      height: 'h-12',
+      height: 'min-h-[60px]',
       icon: '☀️'
     },
     {
       name: 'PCM 마이크로캡슐층',
       description: '상변화 열 흡수 (28-32°C)',
       color: 'from-blue-500 to-blue-600',
-      height: 'h-20',
+      height: 'min-h-[80px]',
       icon: '❄️',
       highlight: true
     },
@@ -23,14 +23,14 @@ export default function PCMLayerDiagram() {
       name: '단열층',
       description: '열 전달 차단',
       color: 'from-slate-300 to-slate-400',
-      height: 'h-10',
+      height: 'min-h-[60px]',
       icon: '🛡️'
     },
     {
       name: '내부 원단',
       description: '구조 지지 및 보호',
       color: 'from-gray-400 to-gray-500',
-      height: 'h-8',
+      height: 'min-h-[60px]',
       icon: '📐'
     }
   ]
@@ -80,7 +80,7 @@ export default function PCMLayerDiagram() {
                 }}
               >
                 {/* Layer content */}
-                <div className="absolute inset-0 flex items-start py-2.5 px-4">
+                <div className="w-full h-full flex items-center px-4 py-3">
                   <div className="flex items-center gap-3 flex-1">
                     <span className="text-2xl leading-none">{layer.icon}</span>
                     <div className="flex-1">
