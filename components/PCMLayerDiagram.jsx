@@ -80,22 +80,22 @@ export default function PCMLayerDiagram() {
                 }}
               >
                 {/* Layer content */}
-                <div className="absolute inset-0 flex items-center justify-between px-4">
-                  <div className="flex items-center gap-3">
+                <div className="absolute inset-0 flex items-center px-4">
+                  <div className="flex items-center gap-3 flex-1">
                     <span className="text-2xl">{layer.icon}</span>
-                    <div>
+                    <div className="flex-1">
                       <div className="font-bold text-gray-900 text-sm">{layer.name}</div>
                       <div className="text-xs text-gray-700">{layer.description}</div>
                     </div>
-                  </div>
 
-                  {/* Layer indicator */}
-                  {layer.highlight && (
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                      <span className="text-xs font-bold text-white data-label">핵심 기술</span>
-                    </div>
-                  )}
+                    {/* Layer indicator */}
+                    {layer.highlight && (
+                      <div className="flex items-center gap-2 ml-2">
+                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                        <span className="text-xs font-bold text-white data-label">핵심 기술</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* Shimmer effect for PCM layer */}
