@@ -338,7 +338,7 @@ export default function SciencePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white py-8">
+    <div className="min-h-screen bg-white pt-20 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 헤더 */}
         <div className="text-center mb-12 border-b border-gray-200 pb-8">

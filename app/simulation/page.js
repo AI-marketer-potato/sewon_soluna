@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function SimulationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 pt-16">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-cyan-900 via-blue-900 to-slate-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">

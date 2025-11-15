@@ -3,7 +3,7 @@ import { Building2, Handshake, TrendingUp, Globe, Mail, Phone } from 'lucide-rea
 
 export default function PartnersPage() {
   return (
-    <div className="min-h-screen bg-white py-12">
+    <div className="min-h-screen bg-white pt-20 pb-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 헤더 */}
         <div className="mb-16 border-b border-gray-200 pb-8">
