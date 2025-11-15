@@ -1,13 +1,6 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  preload: true
-})
 
 export const metadata = {
   title: '솔루나 - 차세대 자동차 냉각 솔루션',
@@ -23,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
+      <body>
         <div className="min-h-screen flex flex-col">
           <Navigation />
           <main className="flex-1">

@@ -14,21 +14,21 @@ export default function DeltaHistogram({ data, title = "온도 차이 분포" })
   return (
     <div className="w-full">
       <h3 className="text-lg font-semibold mb-4 text-center">{title}</h3>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={350}>
         <BarChart
           data={data}
           margin={{
             top: 5,
             right: 30,
             left: 20,
-            bottom: 5,
+            bottom: 60,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis 
-            dataKey="range" 
+          <XAxis
+            dataKey="range"
             tick={{ fontSize: 12 }}
-            label={{ value: '온도 차이 범위 (°C)', position: 'insideBottom', offset: -5 }}
+            label={{ value: '온도 차이 범위 (°C)', position: 'insideBottom', offset: 0 }}
           />
           <YAxis 
             tick={{ fontSize: 12 }}
