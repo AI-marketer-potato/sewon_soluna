@@ -22,6 +22,7 @@ export default function Navigation() {
     { href: '/', label: '홈' },
     { href: '/science', label: '기술 소개' },
     { href: '/simulation', label: '열전달 시뮬레이션' },
+    { href: '/demo', label: '성능 데모' },
     { href: '/beta', label: '베타 테스트' },
     { href: '/partners', label: '파트너십' },
   ]

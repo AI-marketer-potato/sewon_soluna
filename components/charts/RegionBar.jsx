@@ -30,14 +30,21 @@ export default function RegionBar({ data, title = "지역별 성능 비교" }) {
             tick={{ fontSize: 12 }}
             label={{ value: '지역', position: 'insideBottom', offset: 0 }}
           />
-          <YAxis 
+          <YAxis
+            yAxisId="left"
             tick={{ fontSize: 12 }}
             label={{ value: '평균 온도 차이 (°C)', angle: -90, position: 'insideLeft' }}
           />
-          <Tooltip 
+          <YAxis
+            yAxisId="right"
+            orientation="right"
+            tick={{ fontSize: 12 }}
+            label={{ value: '세션 수', angle: 90, position: 'insideRight' }}
+          />
+          <Tooltip
             formatter={(value, name) => [
-              `${value}°C`, 
-              name === 'avgDelta' ? '평균 온도 차이' : 
+              name === 'avgDelta' ? `${value}°C` : `${value}개`,
+              name === 'avgDelta' ? '평균 온도 차이' :
               name === 'sessions' ? '세션 수' : name
             ]}
             labelFormatter={(label) => `지역: ${label}`}
@@ -48,11 +55,12 @@ export default function RegionBar({ data, title = "지역별 성능 비교" }) {
               value === 'sessions' ? '세션 수' : value
             }
           />
-          <Bar 
-            dataKey="avgDelta" 
-            fill="#10b981" 
+          <Bar
+            dataKey="avgDelta"
+            fill="#10b981"
             name="avgDelta"
             radius={[4, 4, 0, 0]}
+            yAxisId="left"
           />
           <Bar 
             dataKey="sessions" 
